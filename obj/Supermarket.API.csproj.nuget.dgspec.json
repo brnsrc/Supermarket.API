@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BrunoSouza-Desk\\Documents\\Code\\Supermarket.API\\Supermarket.API.csproj": {}
+    "C:\\Users\\BrunoSouza-Desk\\Documents\\code\\Supermarket.API\\Supermarket.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BrunoSouza-Desk\\Documents\\Code\\Supermarket.API\\Supermarket.API.csproj": {
+    "C:\\Users\\BrunoSouza-Desk\\Documents\\code\\Supermarket.API\\Supermarket.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BrunoSouza-Desk\\Documents\\Code\\Supermarket.API\\Supermarket.API.csproj",
+        "projectUniqueName": "C:\\Users\\BrunoSouza-Desk\\Documents\\code\\Supermarket.API\\Supermarket.API.csproj",
         "projectName": "Supermarket.API",
-        "projectPath": "C:\\Users\\BrunoSouza-Desk\\Documents\\Code\\Supermarket.API\\Supermarket.API.csproj",
+        "projectPath": "C:\\Users\\BrunoSouza-Desk\\Documents\\code\\Supermarket.API\\Supermarket.API.csproj",
         "packagesPath": "C:\\Users\\BrunoSouza-Desk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BrunoSouza-Desk\\Documents\\Code\\Supermarket.API\\obj\\",
+        "outputPath": "C:\\Users\\BrunoSouza-Desk\\Documents\\code\\Supermarket.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -46,6 +52,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.20, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -71,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
