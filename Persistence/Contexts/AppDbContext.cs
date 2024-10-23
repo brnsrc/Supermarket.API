@@ -29,7 +29,7 @@ namespace Supermarket.API.Persistence.Contexts
             builder.Entity<Product>().HasKey(p => p.Id);
             builder.Entity<Product>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(50);
-            builder.Entity<Product>().Property(p => p.QuantityInPackage).IsRequired();
+            builder.Entity<Product>().Property(p => p.QuantityPackage).IsRequired();
             builder.Entity<Product>().Property(p => p.EUnitOfMeasurement).IsRequired();
 
         }
