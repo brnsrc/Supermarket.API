@@ -10,6 +10,11 @@ namespace Supermarket.API.Persistence.Contexts
 
         public AppDbContext(DbContextOptions options) : base(options) { }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseInMemoryDatabase("supermarket-api-in-memory");
+        }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -29,7 +34,7 @@ namespace Supermarket.API.Persistence.Contexts
             builder.Entity<Product>().HasKey(p => p.Id);
             builder.Entity<Product>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(50);
-            builder.Entity<Product>().Property(p => p.QuantityPackage).IsRequired();
+            builder.Entity<Product>().Property(p => p.QuantityInPackage).IsRequired();
             builder.Entity<Product>().Property(p => p.EUnitOfMeasurement).IsRequired();
 
         }
