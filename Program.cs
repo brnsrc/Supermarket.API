@@ -14,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMvc();
+// builder.Services.AddAutoMapper();
 builder.Services.AddDbContext<AppDbContext>(options => {
     options.UseInMemoryDatabase("supermarket-api-in-memory");
 });
@@ -22,6 +23,11 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+using(var context = scope.ServiceProvider.GetService<AppDbContext>()){
+    context.Database.EnsureCreated();
+}
 
 
 // Configure the HTTP request pipeline.
